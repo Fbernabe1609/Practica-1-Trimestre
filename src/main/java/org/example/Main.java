@@ -1,7 +1,10 @@
 package org.example;
 
+import org.example.models.DbHelper;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        DbHelper db = new DbHelper();
+        db.viewDocument();
     }
 }
