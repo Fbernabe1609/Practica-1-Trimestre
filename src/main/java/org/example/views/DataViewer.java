@@ -2,6 +2,6 @@ package org.example.views;
 
 import javax.swing.*;
 
-public class DataViwer {
+public class DataViewer {
     private JPanel bodyPanel;
 }
