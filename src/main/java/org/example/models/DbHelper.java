@@ -10,10 +10,7 @@ import com.mongodb.client.result.InsertOneResult;
 import org.bson.Document;
 import org.bson.conversions.Bson;
 import org.bson.types.ObjectId;
-import java.util.Arrays;
 import java.util.Objects;
-
-import static com.mongodb.client.model.Filters.eq;
 
 public class DbHelper {
 
@@ -41,14 +38,27 @@ public class DbHelper {
 //    }
 
     public User viewDocument(String username, String password) {
+
         Bson filter = Filters.and(Filters.gt("nombre_de_usuario", username), Filters.lt("contraseña", password));
         Document doc = collection.find(filter).first();
-        System.out.println("Cuenta encontrada");
+
         return new User(Objects.requireNonNull(doc).get("nombre").toString(),
                 Objects.requireNonNull(doc).get("apellidos").toString(),
                 Objects.requireNonNull(doc).get("nombre_de_usuario").toString(),
                 Objects.requireNonNull(doc).get("email").toString(),
                 Objects.requireNonNull(doc).get("contraseña").toString());
+    }
+
+    public boolean searchUser(String username, String password){
+
+        Bson filter = Filters.and(Filters.gt("nombre_de_usuario", username), Filters.lt("contraseña", password));
+        Document doc = collection.find(filter).first();
+        if (doc.isEmpty()){
+            return false;
+        } else {
+            System.out.println("Cuenta encontrada");
+            return true;
+        }
     }
 
 //    public void addDataDocument() {

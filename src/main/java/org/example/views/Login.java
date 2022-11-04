@@ -1,5 +1,7 @@
 package org.example.views;
 
+import org.example.controllers.ValidationData;
+
 import javax.swing.*;
 import java.awt.event.*;
 
@@ -29,7 +31,6 @@ public class Login extends JDialog {
             }
         });
 
-        // call onCancel() when cross is clicked
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e) {
@@ -37,7 +38,6 @@ public class Login extends JDialog {
             }
         });
 
-        // call onCancel() on ESCAPE
         contentPane.registerKeyboardAction(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 onCancel();
@@ -46,12 +46,14 @@ public class Login extends JDialog {
     }
 
     private void onOK() {
-        // add your code here
-        dispose();
+        if ( ValidationData.checkFields(usernameField.getText(), passwordField.getPassword().toString())){
+            dispose();
+        } else {
+            JOptionPane.showMessageDialog(this,"Error","Completa todos los campos", JOptionPane.ERROR_MESSAGE);
+        }
     }
 
     private void onCancel() {
-        // add your code here if necessary
         dispose();
     }
 
