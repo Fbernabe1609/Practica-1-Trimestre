@@ -44,7 +44,6 @@ public class DbHelper {
         Bson filter = Filters.and(Filters.gt("nombre_de_usuario", username), Filters.lt("contraseña", password));
         Document doc = collection.find(filter).first();
         System.out.println("Cuenta encontrada");
-//        Objects.requireNonNull(doc).toJson()
         return new User(Objects.requireNonNull(doc).get("nombre").toString(),
                 Objects.requireNonNull(doc).get("apellidos").toString(),
                 Objects.requireNonNull(doc).get("nombre_de_usuario").toString(),

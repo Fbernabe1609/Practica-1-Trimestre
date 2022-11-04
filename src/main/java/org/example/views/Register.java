@@ -7,6 +7,18 @@ public class Register extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
+    private JPasswordField passwordField;
+    private JPasswordField confirmPasswordField;
+    private JTextField emailField;
+    private JTextField usernameField;
+    private JTextField surnameField;
+    private JTextField nameField;
+    private JLabel nameLabel;
+    private JLabel surnameLabel;
+    private JLabel usernameLabel;
+    private JLabel emailLabel;
+    private JLabel passwordLavel;
+    private JLabel confirmPasswordLabel;
 
     public Register() {
         setContentPane(contentPane);
@@ -54,7 +66,8 @@ public class Register extends JDialog {
     public static void start() {
         Register dialog = new Register();
         dialog.pack();
+        dialog.setLocation(StartViews.appFrame.getLocation());
+        dialog.setLocationRelativeTo(null);
         dialog.setVisible(true);
-        System.exit(0);
     }
 }

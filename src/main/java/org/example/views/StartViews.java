@@ -14,5 +14,6 @@ public class StartViews {
         appFrame.setVisible(true);
         appFrame.setResizable(false);
         appFrame.setSize(500,500);
+        appFrame.setLocationRelativeTo(null);
     }
 }

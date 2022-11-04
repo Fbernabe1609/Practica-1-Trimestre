@@ -7,6 +7,10 @@ public class Login extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
+    private JPasswordField passwordField;
+    private JTextField usernameField;
+    private JLabel usernameLabel;
+    private JLabel passwordLabel;
 
     public Login() {
         setContentPane(contentPane);
@@ -54,7 +58,8 @@ public class Login extends JDialog {
     public static void start() {
         Login dialog = new Login();
         dialog.pack();
+        dialog.setLocation(StartViews.appFrame.getLocation());
+        dialog.setLocationRelativeTo(null);
         dialog.setVisible(true);
-        System.exit(0);
     }
 }

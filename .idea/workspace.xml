@@ -4,23 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b9b5e2f-813f-41d9-9cfc-4103b2ef3c81" name="Changes" comment="Conexión Mongodb Atlas">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/models/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Login.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Register.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Register.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/views/StartViews.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/java/MainTest.java" afterDir="false" />
+    <list default="true" id="2b9b5e2f-813f-41d9-9cfc-4103b2ef3c81" name="Changes" comment="Arreglos estructura">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/ValidationData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/DbHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/DbHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/DataViwer.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/DataViewer.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/DataViwer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/DataViewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Home.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Home.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Home.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Login.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Login.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Register.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Register.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/StartViews.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/StartViews.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/models/DbHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/models/DbHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Home.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Home.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Login$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Login$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Login$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Login$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Login$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Login$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Login$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Login$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Register$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Register$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Register$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Register$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Register$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Register$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Register$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Register$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Register.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/StartViews.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/StartViews.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +35,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -57,7 +62,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "create.test.in.the.same.root": "true",
     "last_opened_file_path": "C:/Users/2 DAM/Desktop/Practica-1-Trimestre/test/java",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "reference.settings.project.maven.testRunning"
@@ -70,6 +75,9 @@
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Cliente\Desktop\Practica-1-Trimestre\src\test\java" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="org.example" />
@@ -120,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667339509268</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Arreglos estructura">
+      <created>1667548352716</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1667548352716</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +155,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Inicio" />
     <MESSAGE value="Conexión Mongodb Atlas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Conexión Mongodb Atlas" />
+    <MESSAGE value="Arreglos estructura" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arreglos estructura" />
   </component>
 </project>
