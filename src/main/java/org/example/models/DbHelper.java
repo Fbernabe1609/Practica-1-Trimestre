@@ -49,11 +49,11 @@ public class DbHelper {
 
         Document doc = Objects.requireNonNull(getDoc(username, password));
 
-        return new User(doc.get("nombre").toString(),
-                doc.get("apellidos").toString(),
-                doc.get("nombre_de_usuario").toString(),
-                doc.get("email").toString(),
-                doc.get("contraseña").toString());
+        return new User(doc.get(nameFieldName).toString(),
+                doc.get(surnameFieldName).toString(),
+                doc.get(usernameFieldName).toString(),
+                doc.get(emailFieldName).toString(),
+                doc.get(passwordFieldName).toString());
     }
 
     public boolean searchUser(String username, String password) {

@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b9b5e2f-813f-41d9-9cfc-4103b2ef3c81" name="Changes" comment="Avance casa, null tocando los huevos">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/DbHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/DbHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/models/DbHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/models/DbHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Register.class" afterDir="false" />
-    </list>
+    <list default="true" id="2b9b5e2f-813f-41d9-9cfc-4103b2ef3c81" name="Changes" comment="Avance casa, los null ya no toca los huevos" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,7 +94,7 @@
       <workItem from="1667324891533" duration="5624000" />
       <workItem from="1667502489557" duration="3624000" />
       <workItem from="1667724625996" duration="2529000" />
-      <workItem from="1667744329549" duration="9410000" />
+      <workItem from="1667744329549" duration="10054000" />
     </task>
     <task id="LOCAL-00001" summary="Inicio">
       <created>1667327097802</created>
@@ -137,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667759067476</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Avance casa, los null ya no toca los huevos">
+      <created>1667761562592</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1667761562592</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +161,7 @@
     <MESSAGE value="Arreglos estructura" />
     <MESSAGE value="Avance casa" />
     <MESSAGE value="Avance casa, null tocando los huevos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Avance casa, null tocando los huevos" />
+    <MESSAGE value="Avance casa, los null ya no toca los huevos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Avance casa, los null ya no toca los huevos" />
   </component>
 </project>
