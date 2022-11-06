@@ -4,21 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b9b5e2f-813f-41d9-9cfc-4103b2ef3c81" name="Changes" comment="Avance clase">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_11_2022_8_48__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_11_2022_8_48__Changes_.xml" afterDir="false" />
+    <list default="true" id="2b9b5e2f-813f-41d9-9cfc-4103b2ef3c81" name="Changes" comment="Avance casa">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_11_2022_17_33__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_11_2022_17_33__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/DbHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/DbHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Home.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Home.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/DataViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/DataViewer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Register.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Register.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Register.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/StartViews.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/StartViews.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/models/DbHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/models/DbHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Home$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Home$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/DataViewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/DataViewer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Login$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Login$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Login$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Login$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Login$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Login$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Login$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Login$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Register.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/StartViews.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/StartViews.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +61,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.testRunning&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -107,6 +109,8 @@
       <updated>1667324890257</updated>
       <workItem from="1667324891533" duration="5624000" />
       <workItem from="1667502489557" duration="3624000" />
+      <workItem from="1667724625996" duration="2529000" />
+      <workItem from="1667744329549" duration="2953000" />
     </task>
     <task id="LOCAL-00001" summary="Inicio">
       <created>1667327097802</created>

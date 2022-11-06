@@ -1,9 +1,11 @@
 package org.example.views;
 
 import org.example.controllers.ValidationData;
+import org.example.models.DbHelper;
 
 import javax.swing.*;
 import java.awt.event.*;
+import java.util.Arrays;
 
 public class Login extends JDialog {
     private JPanel contentPane;
@@ -13,6 +15,8 @@ public class Login extends JDialog {
     private JTextField usernameField;
     private JLabel usernameLabel;
     private JLabel passwordLabel;
+
+    DbHelper db = new DbHelper();
 
     public Login() {
         setContentPane(contentPane);
@@ -46,10 +50,16 @@ public class Login extends JDialog {
     }
 
     private void onOK() {
-        if ( ValidationData.checkFields(usernameField.getText(), passwordField.getPassword().toString())){
-            dispose();
+        if ( ValidationData.checkFields(usernameField.getText(), Arrays.toString(passwordField.getPassword()))){
+            if (db.searchUser(usernameField.getText(), Arrays.toString(passwordField.getPassword()))) {
+                DataViewer.user = db.viewDocument(usernameField.getText(), Arrays.toString(passwordField.getPassword()));
+                dispose();
+                StartViews.startDataViewer();
+            } else {
+                JOptionPane.showMessageDialog(this,"No se ha encontrado algún usuario con los datos introducidos","Error", JOptionPane.ERROR_MESSAGE);
+            }
         } else {
-            JOptionPane.showMessageDialog(this,"Error","Completa todos los campos", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this,"Completa todos los campos","Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 

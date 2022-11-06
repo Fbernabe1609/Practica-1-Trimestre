@@ -1,7 +1,11 @@
 package org.example.views;
 
+import org.example.controllers.ValidationData;
+import org.example.models.DbHelper;
+
 import javax.swing.*;
 import java.awt.event.*;
+import java.util.Arrays;
 
 public class Register extends JDialog {
     private JPanel contentPane;
@@ -17,8 +21,10 @@ public class Register extends JDialog {
     private JLabel surnameLabel;
     private JLabel usernameLabel;
     private JLabel emailLabel;
-    private JLabel passwordLavel;
+    private JLabel passwordLabel;
     private JLabel confirmPasswordLabel;
+
+    DbHelper db = new DbHelper();
 
     public Register() {
         setContentPane(contentPane);
@@ -37,7 +43,6 @@ public class Register extends JDialog {
             }
         });
 
-        // call onCancel() when cross is clicked
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e) {
@@ -54,8 +59,22 @@ public class Register extends JDialog {
     }
 
     private void onOK() {
-        // add your code here
-        dispose();
+        if (ValidationData.checkFields(nameField.getText(), surnameField.getName(), usernameField.getText(), emailField.getText(), Arrays.toString(passwordField.getPassword()), Arrays.toString(confirmPasswordField.getPassword()))) {
+            if (Arrays.toString(passwordField.getPassword()).equals(Arrays.toString(confirmPasswordField.getPassword()))) {
+
+            } else {
+                JOptionPane.showMessageDialog(this, "La contraseña y su confirmación no coinciden", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+            if (db.searchUser(usernameField.getText(), Arrays.toString(passwordField.getPassword()))) {
+                DataViewer.user = db.viewDocument(usernameField.getText(), Arrays.toString(passwordField.getPassword()));
+                dispose();
+                StartViews.startDataViewer();
+            } else {
+                JOptionPane.showMessageDialog(this, "No se ha encontrado algún usuario con los datos introducidos", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Completa todos los campos", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }
 
     private void onCancel() {

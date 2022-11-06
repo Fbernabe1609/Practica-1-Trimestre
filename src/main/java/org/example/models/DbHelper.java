@@ -10,10 +10,18 @@ import com.mongodb.client.result.InsertOneResult;
 import org.bson.Document;
 import org.bson.conversions.Bson;
 import org.bson.types.ObjectId;
+
 import java.util.Objects;
+
+import static com.mongodb.client.model.Filters.eq;
 
 public class DbHelper {
 
+    String nameFieldName = "nombre";
+    String surnameFieldName = "apellidos";
+    String usernameFieldName = "nombre_de_usuario";
+    String emailFieldName = "email";
+    String passwordFieldName = "contraseña";
     String dbUsername = "Fbernabe";
     String dbPassword = "pPZXijuT4UaLaL80";
     String databaseName = "Clase";
@@ -39,8 +47,7 @@ public class DbHelper {
 
     public User viewDocument(String username, String password) {
 
-        Bson filter = Filters.and(Filters.gt("nombre_de_usuario", username), Filters.lt("contraseña", password));
-        Document doc = collection.find(filter).first();
+        Document doc = getDoc(username, password);
 
         return new User(Objects.requireNonNull(doc).get("nombre").toString(),
                 Objects.requireNonNull(doc).get("apellidos").toString(),
@@ -49,15 +56,42 @@ public class DbHelper {
                 Objects.requireNonNull(doc).get("contraseña").toString());
     }
 
-    public boolean searchUser(String username, String password){
+    public boolean searchUser(String username, String password) {
 
-        Bson filter = Filters.and(Filters.gt("nombre_de_usuario", username), Filters.lt("contraseña", password));
-        Document doc = collection.find(filter).first();
-        if (doc.isEmpty()){
+        if (getDoc(username, password) == null) {
             return false;
         } else {
             System.out.println("Cuenta encontrada");
             return true;
+        }
+    }
+
+    public Document getDoc(String username, String password) {
+
+        Bson filter = Filters.and(Filters.gt("nombre_de_usuario", username), Filters.lt("contraseña", password));
+        return collection.find(filter).first();
+    }
+
+    public boolean searchIfExist(String fieldName, String data) {
+        Document doc = collection.find(eq(fieldName, data)).first();
+        if (doc == null) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public int checkRegister(String username, String email) {
+        boolean usernameExist = searchIfExist(usernameFieldName, username);
+        boolean emailExist = searchIfExist(emailFieldName, email);
+        if (emailExist && usernameExist) {
+            return 0;
+        } else if (emailExist && !usernameExist) {
+            return 1;
+        } else if (!emailExist && usernameExist) {
+            return 2;
+        } else {
+            return 3;
         }
     }
 
@@ -77,11 +111,11 @@ public class DbHelper {
         try {
             InsertOneResult result = collection.insertOne(new Document()
                     .append("_id", new ObjectId())
-                    .append("nombre", name)
-                    .append("apellidos", surname)
-                    .append("nombre_de_usuario", username)
-                    .append("email", email)
-                    .append("contraseña", password)
+                    .append(nameFieldName, name)
+                    .append(surnameFieldName, surname)
+                    .append(usernameFieldName, username)
+                    .append(emailFieldName, email)
+                    .append(passwordFieldName, password)
             );
             System.out.println("¡Éxito! Id documento: " + result.getInsertedId());
         } catch (MongoException e) {
