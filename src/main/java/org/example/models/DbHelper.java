@@ -49,6 +49,7 @@ public class DbHelper {
 
         Document doc = getDoc(username, password);
 
+        //Todo mirar que cojones pasa con los putos null
         return new User(Objects.requireNonNull(doc).get("nombre").toString(),
                 Objects.requireNonNull(doc).get("apellidos").toString(),
                 Objects.requireNonNull(doc).get("nombre_de_usuario").toString(),

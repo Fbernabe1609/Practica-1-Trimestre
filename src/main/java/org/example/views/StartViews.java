@@ -14,7 +14,7 @@ public class StartViews {
         appFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         appFrame.setVisible(true);
         appFrame.setResizable(false);
-        appFrame.setSize(500,300);
+        appFrame.setSize(500,500);
         appFrame.setLocationRelativeTo(null);
     }
 

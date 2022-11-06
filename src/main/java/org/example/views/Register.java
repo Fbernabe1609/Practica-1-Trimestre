@@ -59,18 +59,30 @@ public class Register extends JDialog {
     }
 
     private void onOK() {
-        if (ValidationData.checkFields(nameField.getText(), surnameField.getName(), usernameField.getText(), emailField.getText(), Arrays.toString(passwordField.getPassword()), Arrays.toString(confirmPasswordField.getPassword()))) {
+        if (ValidationData.checkFields(nameField.getText(), surnameField.getText(), usernameField.getText(), emailField.getText(), Arrays.toString(passwordField.getPassword()), Arrays.toString(confirmPasswordField.getPassword()))) {
             if (Arrays.toString(passwordField.getPassword()).equals(Arrays.toString(confirmPasswordField.getPassword()))) {
 
+                switch (db.checkRegister(usernameField.getText(), emailField.getText())) {
+                    case 0 -> {
+                        db.addDataDocument(nameField.getText(), surnameField.getText(), usernameField.getText(), emailField.getText(), Arrays.toString(passwordField.getPassword()));
+                        try {
+                            Thread.sleep(1000);
+                            DataViewer.user = db.viewDocument(usernameField.getText(), Arrays.toString(passwordField.getPassword()));
+                            dispose();
+                            StartViews.startDataViewer();
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                    }
+                    case 1 ->
+                            JOptionPane.showMessageDialog(this, "Ya hay una cuenta con ese nombre de usuario", "Error", JOptionPane.ERROR_MESSAGE);
+                    case 2 ->
+                            JOptionPane.showMessageDialog(this, "Ya hay una cuenta con ese email", "Error", JOptionPane.ERROR_MESSAGE);
+                    default ->
+                            JOptionPane.showMessageDialog(this, "Ya hay una cuenta con los datos introducidos", "Error", JOptionPane.ERROR_MESSAGE);
+                }
             } else {
                 JOptionPane.showMessageDialog(this, "La contraseña y su confirmación no coinciden", "Error", JOptionPane.ERROR_MESSAGE);
-            }
-            if (db.searchUser(usernameField.getText(), Arrays.toString(passwordField.getPassword()))) {
-                DataViewer.user = db.viewDocument(usernameField.getText(), Arrays.toString(passwordField.getPassword()));
-                dispose();
-                StartViews.startDataViewer();
-            } else {
-                JOptionPane.showMessageDialog(this, "No se ha encontrado algún usuario con los datos introducidos", "Error", JOptionPane.ERROR_MESSAGE);
             }
         } else {
             JOptionPane.showMessageDialog(this, "Completa todos los campos", "Error", JOptionPane.ERROR_MESSAGE);
@@ -78,7 +90,6 @@ public class Register extends JDialog {
     }
 
     private void onCancel() {
-        // add your code here if necessary
         dispose();
     }
 
