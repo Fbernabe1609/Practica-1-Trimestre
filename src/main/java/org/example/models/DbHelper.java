@@ -47,14 +47,13 @@ public class DbHelper {
 
     public User viewDocument(String username, String password) {
 
-        Document doc = getDoc(username, password);
+        Document doc = Objects.requireNonNull(getDoc(username, password));
 
-        //Todo mirar que cojones pasa con los putos null
-        return new User(Objects.requireNonNull(doc).get("nombre").toString(),
-                Objects.requireNonNull(doc).get("apellidos").toString(),
-                Objects.requireNonNull(doc).get("nombre_de_usuario").toString(),
-                Objects.requireNonNull(doc).get("email").toString(),
-                Objects.requireNonNull(doc).get("contraseña").toString());
+        return new User(doc.get("nombre").toString(),
+                doc.get("apellidos").toString(),
+                doc.get("nombre_de_usuario").toString(),
+                doc.get("email").toString(),
+                doc.get("contraseña").toString());
     }
 
     public boolean searchUser(String username, String password) {
@@ -69,7 +68,7 @@ public class DbHelper {
 
     public Document getDoc(String username, String password) {
 
-        Bson filter = Filters.and(Filters.gt("nombre_de_usuario", username), Filters.lt("contraseña", password));
+        Bson filter = Filters.and(Filters.eq("nombre_de_usuario", username), Filters.eq("contraseña", password));
         return collection.find(filter).first();
     }
 
