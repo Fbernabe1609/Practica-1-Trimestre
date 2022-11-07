@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b9b5e2f-813f-41d9-9cfc-4103b2ef3c81" name="Changes" comment="Avance clase" />
+    <list default="true" id="2b9b5e2f-813f-41d9-9cfc-4103b2ef3c81" name="Changes" comment="Avance clase">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/error.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/DbController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/DbController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/DataViewer.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/DataViewer.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/DataViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/DataViewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Home.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Home.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Home.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Login.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Login.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Register.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Register.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/StartViews.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/StartViews.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controllers/DbController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controllers/DbController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/DataViewer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/DataViewer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/DataViewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/DataViewer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Home.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Home.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Login$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Login$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Register$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Register$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Register.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/StartViews.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/StartViews.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,6 +81,7 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\2 DAM\Desktop\Practica-1-Trimestre-Interfaces\src\main\resources" />
       <recent name="C:\Users\Cliente\Desktop\Practica-1-Trimestre\src\test\java" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
@@ -98,7 +121,7 @@
       <workItem from="1667724625996" duration="2529000" />
       <workItem from="1667744329549" duration="10755000" />
       <workItem from="1667809899873" duration="8406000" />
-      <workItem from="1667828405831" duration="14915000" />
+      <workItem from="1667828405831" duration="19731000" />
     </task>
     <task id="LOCAL-00001" summary="Inicio">
       <created>1667327097802</created>
@@ -177,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667847297676</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Avance clase">
+      <created>1667847363275</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1667847363275</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

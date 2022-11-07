@@ -1,7 +1,6 @@
 package org.example.views;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class Home {
     JPanel bodyPanel;

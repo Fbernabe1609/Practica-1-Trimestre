@@ -36,6 +36,7 @@
                   <background color="-8274490"/>
                   <foreground color="-1"/>
                   <text value="Ver datos"/>
+                  <toolTipText value="Ver datos"/>
                 </properties>
               </component>
               <component id="5830d" class="javax.swing.JButton" binding="goBackButton">
@@ -44,6 +45,7 @@
                   <background color="-8274490"/>
                   <foreground color="-1"/>
                   <text value="Volver"/>
+                  <toolTipText value="Volver"/>
                 </properties>
               </component>
               <component id="18a7a" class="javax.swing.JButton" binding="exitButton">
@@ -52,6 +54,7 @@
                   <background color="-8274490"/>
                   <foreground color="-1"/>
                   <text value="Salir"/>
+                  <toolTipText value="Salir"/>
                 </properties>
               </component>
             </children>

@@ -37,6 +37,7 @@
                   <background color="-8274490"/>
                   <foreground color="-1"/>
                   <text value="OK"/>
+                  <toolTipText value="OK"/>
                 </properties>
               </component>
               <component id="5723f" class="javax.swing.JButton" binding="buttonCancel">
@@ -46,7 +47,8 @@
                 <properties>
                   <background color="-8274490"/>
                   <foreground color="-1"/>
-                  <text value="Cancel"/>
+                  <text value="Cancelar"/>
+                  <toolTipText value="Cancelar"/>
                 </properties>
               </component>
             </children>

@@ -8,18 +8,11 @@ import org.bson.conversions.Bson;
 import org.bson.types.ObjectId;
 import org.example.models.DbHelper;
 
-import java.util.Objects;
-
 import static com.mongodb.client.model.Filters.eq;
 
 public class DbController implements FieldVariables {
 
     private static DbHelper db = new DbHelper();
-
-    public static Document viewDocument(String username, String password) {
-
-        return Objects.requireNonNull(getDoc(username, password));
-    }
 
     public static boolean searchUser(String username, String password) {
         boolean isnull;

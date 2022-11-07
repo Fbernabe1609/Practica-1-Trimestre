@@ -3,10 +3,11 @@ package org.example.views;
 import org.example.controllers.DbController;
 import org.example.controllers.UserController;
 import org.example.controllers.ValidationData;
-import org.example.models.DbHelper;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
+import java.net.URL;
 
 public class Login extends JDialog {
     private JPanel contentPane;
@@ -20,7 +21,15 @@ public class Login extends JDialog {
     private JPanel buttonsPanel;
     private JPanel contentButtonPanel;
 
+    ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+    URL url = classloader.getResource("error.gif");
+    ImageIcon icono = new ImageIcon(url);
     public Login() {
+
+        UIManager.put("OptionPane.messageForeground", Color.red);
+        UIManager.put("Button.background", Color.CYAN);
+        UIManager.put("Button.foreground", Color.white);
+
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
@@ -48,7 +57,7 @@ public class Login extends JDialog {
                 dispose();
                 StartViews.startDataViewer();
             } else {
-                JOptionPane.showMessageDialog(this, "No se ha encontrado algún usuario con los datos introducidos", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "No se ha encontrado algún usuario con los datos introducidos", "Error", JOptionPane.ERROR_MESSAGE, icono);
             }
         } else {
             JOptionPane.showMessageDialog(this, "Completa todos los campos", "Error", JOptionPane.ERROR_MESSAGE);

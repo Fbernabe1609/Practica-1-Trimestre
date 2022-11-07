@@ -34,6 +34,7 @@
               <foreground color="-1"/>
               <label value="Login"/>
               <text value="Login"/>
+              <toolTipText value="Login"/>
             </properties>
           </component>
           <component id="c07cb" class="javax.swing.JButton" binding="registerButton">
@@ -45,6 +46,7 @@
               <foreground color="-1"/>
               <label value="Registrarse"/>
               <text value="Registrarse"/>
+              <toolTipText value="Registrarse"/>
             </properties>
           </component>
           <component id="26af6" class="javax.swing.JButton" binding="exitButton">
@@ -56,6 +58,7 @@
               <foreground color="-1"/>
               <label value="Salir"/>
               <text value="Salir"/>
+              <toolTipText value="Salir"/>
             </properties>
           </component>
         </children>

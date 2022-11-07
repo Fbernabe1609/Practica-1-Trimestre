@@ -1,7 +1,6 @@
 package org.example.views;
 
 import org.example.controllers.UserController;
-import org.example.models.User;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,6 +18,10 @@ public class DataViewer {
     private JButton exitButton;
     private JButton goBackButton;
 
+    private String hideData = "Ocultar datos";
+    private String viewData = "Ver datos";
+
+
     public DataViewer() {
         welcomeLabel.setText(welcomeLabel.getText() + " " + UserController.getUser().getUsername());
         viewDataButton.addActionListener(e -> {
@@ -26,14 +29,16 @@ public class DataViewer {
             String[] column = {"Nombre", "Apellidos", "Nombre de usuario", "Email", "Contraseña"};
             JTable jt = new JTable(data, column);
             JScrollPane sp = new JScrollPane(jt);
-            sp.setPreferredSize(new Dimension(800, 39));
+            sp.setPreferredSize(new Dimension(700, 39));
             jt.getTableHeader().setBackground(Color.black);
             jt.getTableHeader().setForeground(Color.white);
-            if (viewDataButton.getText().equals("Ver datos")) {
-                viewDataButton.setText("Ocultar datos");
+            if (viewDataButton.getText().equals(viewData)) {
+                viewDataButton.setText(hideData);
+                viewDataButton.setToolTipText(hideData);
                 tablePanel.add(sp);
             } else {
-                viewDataButton.setText("Ver datos");
+                viewDataButton.setText(viewData);
+                viewDataButton.setToolTipText(viewData);
                 tablePanel.removeAll();
                 tablePanel.updateUI();
             }

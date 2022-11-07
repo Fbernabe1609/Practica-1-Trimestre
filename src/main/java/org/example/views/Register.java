@@ -3,12 +3,12 @@ package org.example.views;
 import org.example.controllers.DbController;
 import org.example.controllers.UserController;
 import org.example.controllers.ValidationData;
-import org.example.models.DbHelper;
+
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.util.Arrays;
+import java.net.URL;
 
 public class Register extends JDialog {
     private JPanel contentPane;
@@ -27,7 +27,15 @@ public class Register extends JDialog {
     private JLabel passwordLabel;
     private JLabel confirmPasswordLabel;
 
+    ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+    URL url = classloader.getResource("error.gif");
+    ImageIcon icono = new ImageIcon(url);
     public Register() {
+
+        UIManager.put("OptionPane.messageForeground", Color.red);
+        UIManager.put("Button.background", Color.BLACK);
+        UIManager.put("Button.foreground", Color.white);
+
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
@@ -68,13 +76,13 @@ public class Register extends JDialog {
                                 JOptionPane.showMessageDialog(this, "Ya hay una cuenta con los datos introducidos", "Error", JOptionPane.ERROR_MESSAGE);
                     }
                 } else {
-                    JOptionPane.showMessageDialog(this, "Debe introducir un email válido", "Error", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Debe introducir un email válido", "Error", JOptionPane.ERROR_MESSAGE, icono);
                 }
             } else {
-                JOptionPane.showMessageDialog(this, "La contraseña y su confirmación no coinciden", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "La contraseña y su confirmación no coinciden", "Error", JOptionPane.ERROR_MESSAGE, icono);
             }
         } else {
-            JOptionPane.showMessageDialog(this, "Completa todos los campos", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Completa todos los campos", "Error", JOptionPane.ERROR_MESSAGE, icono);
         }
     }
 
