@@ -1,9 +1,11 @@
 package org.example.views;
 
+import org.example.controllers.DbController;
 import org.example.controllers.ValidationData;
 import org.example.models.DbHelper;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
 import java.util.Arrays;
 
@@ -24,7 +26,7 @@ public class Register extends JDialog {
     private JLabel passwordLabel;
     private JLabel confirmPasswordLabel;
 
-    DbHelper db = new DbHelper();
+    DbController db = new DbController();
 
     public Register() {
         setContentPane(contentPane);
@@ -49,26 +51,30 @@ public class Register extends JDialog {
         if (ValidationData.checkFields(nameField.getText(), surnameField.getText(), usernameField.getText(), emailField.getText(), String.valueOf(passwordField.getPassword()), String.valueOf(confirmPasswordField.getPassword()))) {
             if (ValidationData.checkPassword(String.valueOf(passwordField.getPassword()), String.valueOf(confirmPasswordField.getPassword()))) {
 
-                switch (db.checkRegister(usernameField.getText(), emailField.getText())) {
-                    case 0 -> {
-                        String password = String.valueOf(passwordField.getPassword()).replaceAll(" ,]","");
-                        password = password.replace("[","");
-                        db.addDataDocument(nameField.getText(), surnameField.getText(), usernameField.getText(), emailField.getText(), password);
-                        try {
-                            Thread.sleep(1000);
-                            DataViewer.user = db.viewDocument(usernameField.getText(), password);
-                            dispose();
-                            StartViews.startDataViewer();
-                        } catch (InterruptedException e) {
-                            throw new RuntimeException(e);
+                if (ValidationData.checkEmail(emailField.getText())) {
+                    switch (db.checkRegister(usernameField.getText(), emailField.getText())) {
+                        case 0 -> {
+                            String password = String.valueOf(passwordField.getPassword()).replaceAll(" ,]", "");
+                            password = password.replace("[", "");
+                            db.addDataDocument(nameField.getText(), surnameField.getText(), usernameField.getText(), emailField.getText(), password);
+                            try {
+                                Thread.sleep(1000);
+                                DataViewer.user = db.viewDocument(usernameField.getText(), password);
+                                dispose();
+                                StartViews.startDataViewer();
+                            } catch (InterruptedException e) {
+                                throw new RuntimeException(e);
+                            }
                         }
+                        case 1 ->
+                                JOptionPane.showMessageDialog(this, "Ya hay una cuenta con ese nombre de usuario", "Error", JOptionPane.ERROR_MESSAGE);
+                        case 2 ->
+                                JOptionPane.showMessageDialog(this, "Ya hay una cuenta con ese email", "Error", JOptionPane.ERROR_MESSAGE);
+                        default ->
+                                JOptionPane.showMessageDialog(this, "Ya hay una cuenta con los datos introducidos", "Error", JOptionPane.ERROR_MESSAGE);
                     }
-                    case 1 ->
-                            JOptionPane.showMessageDialog(this, "Ya hay una cuenta con ese nombre de usuario", "Error", JOptionPane.ERROR_MESSAGE);
-                    case 2 ->
-                            JOptionPane.showMessageDialog(this, "Ya hay una cuenta con ese email", "Error", JOptionPane.ERROR_MESSAGE);
-                    default ->
-                            JOptionPane.showMessageDialog(this, "Ya hay una cuenta con los datos introducidos", "Error", JOptionPane.ERROR_MESSAGE);
+                } else {
+                    JOptionPane.showMessageDialog(this, "Debe introducir un email válido", "Error", JOptionPane.ERROR_MESSAGE);
                 }
             } else {
                 JOptionPane.showMessageDialog(this, "La contraseña y su confirmación no coinciden", "Error", JOptionPane.ERROR_MESSAGE);
@@ -89,4 +95,5 @@ public class Register extends JDialog {
         dialog.setLocationRelativeTo(null);
         dialog.setVisible(true);
     }
+
 }

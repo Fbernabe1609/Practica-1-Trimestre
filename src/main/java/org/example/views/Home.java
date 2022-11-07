@@ -1,6 +1,7 @@
 package org.example.views;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Home {
     JPanel bodyPanel;
@@ -15,4 +16,5 @@ public class Home {
         registerButton.addActionListener(e -> Register.start());
         exitButton.addActionListener(e -> System.exit(0));
     }
+
 }

@@ -6,32 +6,31 @@ import java.util.regex.Pattern;
 public class ValidationData {
 
     public static boolean checkFields(String username, String password) {
+        boolean empty;
         if (username.isEmpty() || password.isEmpty()) {
-            return false;
+            empty = false;
         } else {
-            return true;
+            empty = true;
         }
+
+        return empty;
     }
 
     public static boolean checkFields(String name, String surname, String username, String email, String password, String confirmPassword) {
+        boolean empty;
         if (username.isEmpty() || password.isEmpty() || surname.isEmpty() || name.isEmpty() || email.isEmpty() || confirmPassword.isEmpty()) {
-            return false;
+            empty = false;
         } else {
-            return true;
+            empty = true;
         }
+        return empty;
     }
 
     public static boolean checkEmail(String email) {
         Pattern pattern = Pattern.compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
                 + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
-        Matcher mather = pattern.matcher(email);
-        if (mather.find()) {
-            System.out.println("El email ingresado es válido.");
-            return true;
-        } else {
-            System.out.println("El email ingresado es inválido.");
-            return false;
-        }
+        Matcher matcher = pattern.matcher(email);
+        return matcher.find();
     }
 
     public static boolean checkPassword(String password, String confirmPassword) {

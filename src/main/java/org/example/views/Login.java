@@ -1,11 +1,11 @@
 package org.example.views;
 
+import org.example.controllers.DbController;
 import org.example.controllers.ValidationData;
 import org.example.models.DbHelper;
 
 import javax.swing.*;
 import java.awt.event.*;
-import java.util.Arrays;
 
 public class Login extends JDialog {
     private JPanel contentPane;
@@ -19,7 +19,7 @@ public class Login extends JDialog {
     private JPanel buttonsPanel;
     private JPanel contentButtonPanel;
 
-    DbHelper db = new DbHelper();
+    DbController db = new DbController();
 
     public Login() {
         setContentPane(contentPane);
