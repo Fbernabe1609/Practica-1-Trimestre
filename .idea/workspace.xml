@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b9b5e2f-813f-41d9-9cfc-4103b2ef3c81" name="Changes" comment="Avance clase, procesando los controladores">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/FieldVariables.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/DbController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/DbController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/DataViewer.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/DataViewer.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/DataViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/DataViewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controllers/DbController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controllers/DbController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controllers/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/DataViewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/DataViewer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Login$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Login$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Register$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Register$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Register.class" afterDir="false" />
-    </list>
+    <list default="true" id="2b9b5e2f-813f-41d9-9cfc-4103b2ef3c81" name="Changes" comment="Avance clase" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,7 +98,7 @@
       <workItem from="1667724625996" duration="2529000" />
       <workItem from="1667744329549" duration="10755000" />
       <workItem from="1667809899873" duration="8406000" />
-      <workItem from="1667828405831" duration="14520000" />
+      <workItem from="1667828405831" duration="14915000" />
     </task>
     <task id="LOCAL-00001" summary="Inicio">
       <created>1667327097802</created>
@@ -179,7 +163,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667841062824</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Avance clase">
+      <created>1667847286292</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1667847286292</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Avance clase">
+      <created>1667847297676</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1667847297676</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,8 +201,8 @@
     <MESSAGE value="Avance casa, null tocando los huevos" />
     <MESSAGE value="Avance casa, los null ya no toca los huevos" />
     <MESSAGE value="Avance casa" />
-    <MESSAGE value="Avance clase" />
     <MESSAGE value="Avance clase, procesando los controladores" />
-    <option name="LAST_COMMIT_MESSAGE" value="Avance clase, procesando los controladores" />
+    <MESSAGE value="Avance clase" />
+    <option name="LAST_COMMIT_MESSAGE" value="Avance clase" />
   </component>
 </project>
