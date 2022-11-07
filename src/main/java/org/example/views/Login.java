@@ -27,7 +27,7 @@ public class Login extends JDialog {
     public Login() {
 
         UIManager.put("OptionPane.messageForeground", Color.red);
-        UIManager.put("Button.background", Color.CYAN);
+        UIManager.put("Button.background", buttonOK.getBackground());
         UIManager.put("Button.foreground", Color.white);
 
         setContentPane(contentPane);

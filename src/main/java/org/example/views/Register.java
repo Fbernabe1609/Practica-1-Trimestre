@@ -33,7 +33,7 @@ public class Register extends JDialog {
     public Register() {
 
         UIManager.put("OptionPane.messageForeground", Color.red);
-        UIManager.put("Button.background", Color.BLACK);
+        UIManager.put("Button.background", buttonOK.getBackground());
         UIManager.put("Button.foreground", Color.white);
 
         setContentPane(contentPane);
