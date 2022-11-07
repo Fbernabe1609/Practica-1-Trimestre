@@ -24,8 +24,8 @@ public class StartViews {
         dataViewerFrame.pack();
         dataViewerFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         dataViewerFrame.setVisible(true);
-        dataViewerFrame.setResizable(false);
-        dataViewerFrame.setSize(500,300);
+//        dataViewerFrame.setResizable(false);
+        dataViewerFrame.setSize(900,300);
         dataViewerFrame.setLocationRelativeTo(null);
         appFrame.dispose();
     }
