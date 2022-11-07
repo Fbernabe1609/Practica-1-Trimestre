@@ -1,6 +1,7 @@
 package org.example.views;
 
 import org.example.controllers.DbController;
+import org.example.controllers.UserController;
 import org.example.controllers.ValidationData;
 import org.example.models.DbHelper;
 
@@ -26,8 +27,6 @@ public class Register extends JDialog {
     private JLabel passwordLabel;
     private JLabel confirmPasswordLabel;
 
-    DbController db = new DbController();
-
     public Register() {
         setContentPane(contentPane);
         setModal(true);
@@ -52,19 +51,14 @@ public class Register extends JDialog {
             if (ValidationData.checkPassword(String.valueOf(passwordField.getPassword()), String.valueOf(confirmPasswordField.getPassword()))) {
 
                 if (ValidationData.checkEmail(emailField.getText())) {
-                    switch (db.checkRegister(usernameField.getText(), emailField.getText())) {
+                    switch (DbController.checkRegister(usernameField.getText(), emailField.getText())) {
                         case 0 -> {
                             String password = String.valueOf(passwordField.getPassword()).replaceAll(" ,]", "");
                             password = password.replace("[", "");
-                            db.addDataDocument(nameField.getText(), surnameField.getText(), usernameField.getText(), emailField.getText(), password);
-                            try {
-                                Thread.sleep(1000);
-                                DataViewer.user = db.viewDocument(usernameField.getText(), password);
-                                dispose();
-                                StartViews.startDataViewer();
-                            } catch (InterruptedException e) {
-                                throw new RuntimeException(e);
-                            }
+                            DbController.addDataDocument(nameField.getText(), surnameField.getText(), usernameField.getText(), emailField.getText(), password);
+                            UserController.createUser(usernameField.getText(), password);
+                            dispose();
+                            StartViews.startDataViewer();
                         }
                         case 1 ->
                                 JOptionPane.showMessageDialog(this, "Ya hay una cuenta con ese nombre de usuario", "Error", JOptionPane.ERROR_MESSAGE);

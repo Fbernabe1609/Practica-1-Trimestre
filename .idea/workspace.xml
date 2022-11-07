@@ -4,19 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b9b5e2f-813f-41d9-9cfc-4103b2ef3c81" name="Changes" comment="Avance clase">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/DbController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserController.java" afterDir="false" />
+    <list default="true" id="2b9b5e2f-813f-41d9-9cfc-4103b2ef3c81" name="Changes" comment="Avance clase, procesando los controladores">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/FieldVariables.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/ValidationData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/ValidationData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/DbHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/DbHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/DbController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/DbController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/DataViewer.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/DataViewer.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/DataViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/DataViewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Home.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controllers/ValidationData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controllers/ValidationData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/models/DbHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/models/DbHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Home.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Home.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controllers/DbController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controllers/DbController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controllers/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/DataViewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/DataViewer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Login$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Login$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Login.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Register$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Register$1.class" afterDir="false" />
@@ -32,6 +31,8 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Enum" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -113,7 +114,7 @@
       <workItem from="1667724625996" duration="2529000" />
       <workItem from="1667744329549" duration="10755000" />
       <workItem from="1667809899873" duration="8406000" />
-      <workItem from="1667828405831" duration="8974000" />
+      <workItem from="1667828405831" duration="14520000" />
     </task>
     <task id="LOCAL-00001" summary="Inicio">
       <created>1667327097802</created>
@@ -171,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667837637029</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Avance clase, procesando los controladores">
+      <created>1667841062824</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1667841062824</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +204,7 @@
     <MESSAGE value="Avance casa, los null ya no toca los huevos" />
     <MESSAGE value="Avance casa" />
     <MESSAGE value="Avance clase" />
-    <option name="LAST_COMMIT_MESSAGE" value="Avance clase" />
+    <MESSAGE value="Avance clase, procesando los controladores" />
+    <option name="LAST_COMMIT_MESSAGE" value="Avance clase, procesando los controladores" />
   </component>
 </project>

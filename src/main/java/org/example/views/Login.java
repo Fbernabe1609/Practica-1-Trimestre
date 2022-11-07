@@ -1,6 +1,7 @@
 package org.example.views;
 
 import org.example.controllers.DbController;
+import org.example.controllers.UserController;
 import org.example.controllers.ValidationData;
 import org.example.models.DbHelper;
 
@@ -18,8 +19,6 @@ public class Login extends JDialog {
     private JPanel bodyPanel;
     private JPanel buttonsPanel;
     private JPanel contentButtonPanel;
-
-    DbController db = new DbController();
 
     public Login() {
         setContentPane(contentPane);
@@ -41,18 +40,18 @@ public class Login extends JDialog {
     }
 
     private void onOK() {
-        if ( ValidationData.checkFields(usernameField.getText(), String.valueOf(passwordField.getPassword()))){
-            String password = String.valueOf(passwordField.getPassword()).replaceAll(" ,]","");
-            password = password.replace("[","");
-            if (db.searchUser(usernameField.getText(), password)) {
-                DataViewer.user = db.viewDocument(usernameField.getText(), password);
+        if (ValidationData.checkFields(usernameField.getText(), String.valueOf(passwordField.getPassword()))) {
+            String password = String.valueOf(passwordField.getPassword()).replaceAll(" ,]", "");
+            password = password.replace("[", "");
+            if (DbController.searchUser(usernameField.getText(), password)) {
+                UserController.createUser(usernameField.getText(), password);
                 dispose();
                 StartViews.startDataViewer();
             } else {
-                JOptionPane.showMessageDialog(this,"No se ha encontrado algún usuario con los datos introducidos","Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "No se ha encontrado algún usuario con los datos introducidos", "Error", JOptionPane.ERROR_MESSAGE);
             }
         } else {
-            JOptionPane.showMessageDialog(this,"Completa todos los campos","Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Completa todos los campos", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 

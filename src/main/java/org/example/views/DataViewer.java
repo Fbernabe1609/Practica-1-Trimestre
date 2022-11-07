@@ -1,9 +1,12 @@
 package org.example.views;
 
+import org.example.controllers.UserController;
 import org.example.models.User;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class DataViewer {
     JPanel bodyPanel;
@@ -13,13 +16,13 @@ public class DataViewer {
     private JPanel buttonPanel;
     private JPanel panelOfPanels;
     private JPanel welcomeLabelPanel;
-
-    static User user;
+    private JButton exitButton;
+    private JButton goBackButton;
 
     public DataViewer() {
-        welcomeLabel.setText(welcomeLabel.getText() + " " + user.getUsername());
+        welcomeLabel.setText(welcomeLabel.getText() + " " + UserController.getUser().getUsername());
         viewDataButton.addActionListener(e -> {
-            String[][] data = {{user.getName(), user.getSurname(), user.getUsername(), user.getEmail(), user.getPassword()}};
+            String[][] data = {{UserController.getUser().getName(), UserController.getUser().getSurname(), UserController.getUser().getUsername(), UserController.getUser().getEmail(), UserController.getUser().getPassword()}};
             String[] column = {"Nombre", "Apellidos", "Nombre de usuario", "Email", "Contraseña"};
             JTable jt = new JTable(data, column);
             JScrollPane sp = new JScrollPane(jt);
@@ -33,6 +36,14 @@ public class DataViewer {
                 viewDataButton.setText("Ver datos");
                 tablePanel.removeAll();
                 tablePanel.updateUI();
+            }
+        });
+        exitButton.addActionListener(e -> System.exit(0));
+        goBackButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                StartViews.startViews();
+                StartViews.dataViewerFrame.dispose();
             }
         });
     }

@@ -7,34 +7,21 @@ import org.bson.Document;
 import org.bson.conversions.Bson;
 import org.bson.types.ObjectId;
 import org.example.models.DbHelper;
-import org.example.models.User;
 
 import java.util.Objects;
 
 import static com.mongodb.client.model.Filters.eq;
 
-public class DbController {
+public class DbController implements FieldVariables {
 
-    private String nameFieldName = "nombre";
-    private String surnameFieldName = "apellidos";
-    private String usernameFieldName = "nombre_de_usuario";
-    private String emailFieldName = "email";
-    private String passwordFieldName = "contraseña";
+    private static DbHelper db = new DbHelper();
 
-    private DbHelper db = new DbHelper();
+    public static Document viewDocument(String username, String password) {
 
-    public User viewDocument(String username, String password) {
-
-        Document doc = Objects.requireNonNull(getDoc(username, password));
-
-        return new User(doc.get(nameFieldName).toString(),
-                doc.get(surnameFieldName).toString(),
-                doc.get(usernameFieldName).toString(),
-                doc.get(emailFieldName).toString(),
-                doc.get(passwordFieldName).toString());
+        return Objects.requireNonNull(getDoc(username, password));
     }
 
-    public boolean searchUser(String username, String password) {
+    public static boolean searchUser(String username, String password) {
         boolean isnull;
         if (getDoc(username, password) == null) {
             isnull = false;
@@ -45,13 +32,13 @@ public class DbController {
         return isnull;
     }
 
-    public Document getDoc(String username, String password) {
+    public static Document getDoc(String username2, String password2) {
 
-        Bson filter = Filters.and(Filters.eq("nombre_de_usuario", username), Filters.eq("contraseña", password));
+        Bson filter = Filters.and(Filters.eq(username, username2), Filters.eq(password, password2));
         return db.getCollection().find(filter).first();
     }
 
-    public boolean searchIfExist(String fieldName, String data) {
+    public static boolean searchIfExist(String fieldName, String data) {
         boolean isnull;
         Document doc = db.getCollection().find(eq(fieldName, data)).first();
         if (doc == null) {
@@ -62,9 +49,9 @@ public class DbController {
         return isnull;
     }
 
-    public int checkRegister(String username, String email) {
-        boolean usernameExist = searchIfExist(usernameFieldName, username);
-        boolean emailExist = searchIfExist(emailFieldName, email);
+    public static int checkRegister(String username2, String email2) {
+        boolean usernameExist = searchIfExist(username, username2);
+        boolean emailExist = searchIfExist(email, email2);
         int num;
         if (emailExist && usernameExist) {
             num = 0;
@@ -78,15 +65,15 @@ public class DbController {
         return num;
     }
 
-    public void addDataDocument(String name, String surname, String username, String email, String password) {
+    public static void addDataDocument(String name2, String surname2, String username2, String email2, String password2) {
         try {
             InsertOneResult result = db.getCollection().insertOne(new Document()
                     .append("_id", new ObjectId())
-                    .append(nameFieldName, name)
-                    .append(surnameFieldName, surname)
-                    .append(usernameFieldName, username)
-                    .append(emailFieldName, email)
-                    .append(passwordFieldName, password)
+                    .append(name, name2)
+                    .append(surname, surname2)
+                    .append(username, username2)
+                    .append(email, email2)
+                    .append(password, password2)
             );
             System.out.println("¡Éxito! Id documento: " + result.getInsertedId());
         } catch (MongoException e) {
