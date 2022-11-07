@@ -26,17 +26,9 @@ public class Login extends JDialog {
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
 
-        buttonOK.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onOK();
-            }
-        });
+        buttonOK.addActionListener(e -> onOK());
 
-        buttonCancel.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onCancel();
-            }
-        });
+        buttonCancel.addActionListener(e -> onCancel());
 
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         addWindowListener(new WindowAdapter() {
@@ -45,17 +37,15 @@ public class Login extends JDialog {
             }
         });
 
-        contentPane.registerKeyboardAction(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onCancel();
-            }
-        }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
+        contentPane.registerKeyboardAction(e -> onCancel(), KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
     }
 
     private void onOK() {
-        if ( ValidationData.checkFields(usernameField.getText(), Arrays.toString(passwordField.getPassword()))){
-            if (db.searchUser(usernameField.getText(), Arrays.toString(passwordField.getPassword()))) {
-                DataViewer.user = db.viewDocument(usernameField.getText(), Arrays.toString(passwordField.getPassword()));
+        if ( ValidationData.checkFields(usernameField.getText(), String.valueOf(passwordField.getPassword()))){
+            String password = String.valueOf(passwordField.getPassword()).replaceAll(" ,]","");
+            password = password.replace("[","");
+            if (db.searchUser(usernameField.getText(), password)) {
+                DataViewer.user = db.viewDocument(usernameField.getText(), password);
                 dispose();
                 StartViews.startDataViewer();
             } else {

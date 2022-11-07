@@ -12,6 +12,7 @@ public class DataViewer {
     private JPanel tablePanel;
     private JPanel buttonPanel;
     private JPanel panelOfPanels;
+    private JPanel welcomeLabelPanel;
 
     static User user;
 

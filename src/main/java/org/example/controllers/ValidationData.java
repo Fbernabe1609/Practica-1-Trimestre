@@ -35,10 +35,6 @@ public class ValidationData {
     }
 
     public static boolean checkPassword(String password, String confirmPassword) {
-        if (password.equals(confirmPassword)) {
-            return true;
-        } else {
-            return false;
-        }
+        return password.equals(confirmPassword);
     }
 }
