@@ -7,7 +7,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 
-public class DbHelper {
+public class DBHelper {
     private String dbUsername = "Fbernabe";
     private String dbPassword = "pPZXijuT4UaLaL80";
     private String databaseName = "Clase";

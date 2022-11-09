@@ -6,13 +6,13 @@ import com.mongodb.client.result.InsertOneResult;
 import org.bson.Document;
 import org.bson.conversions.Bson;
 import org.bson.types.ObjectId;
-import org.example.models.DbHelper;
+import org.example.models.DBHelper;
 
 import static com.mongodb.client.model.Filters.eq;
 
-public class DbController implements FieldVariables {
+public class DBController implements FieldVariables {
 
-    private static DbHelper db = new DbHelper();
+    private static DBHelper db = new DBHelper();
 
     public static boolean searchUser(String username, String password) {
         boolean isnull;
@@ -23,6 +23,9 @@ public class DbController implements FieldVariables {
             isnull = true;
         }
         return isnull;
+    }
+    public static Document exportUser(String email2) {
+        return db.getCollection().find(eq(email,email2)).first();
     }
 
     public static Document getDoc(String username2, String password2) {

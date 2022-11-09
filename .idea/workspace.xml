@@ -4,7 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b9b5e2f-813f-41d9-9cfc-4103b2ef3c81" name="Changes" comment="Avance casa" />
+    <list default="true" id="2b9b5e2f-813f-41d9-9cfc-4103b2ef3c81" name="Changes" comment="Avance casa">
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Commons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_11_2022_17_33__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_11_2022_17_33__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_11_2022_8_48__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_11_2022_8_48__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_11_2022_12_10__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_11_2022_12_10__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/DbController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/DBController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/DbHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/DBHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/DataViewer.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/DataViewer.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/DataViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/DataViewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Login.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Login.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Register.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Register.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/controllers/DbControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/controllers/DBControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controllers/DbController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controllers/DbController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controllers/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/models/DbHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/models/DbHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/DataViewer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/DataViewer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/DataViewer$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/DataViewer$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/DataViewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/DataViewer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Register$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Register$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Register.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,10 +40,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -115,6 +142,7 @@
       <workItem from="1667857166735" duration="969000" />
       <workItem from="1667892364442" duration="8666000" />
       <workItem from="1667988377377" duration="3516000" />
+      <workItem from="1668001780942" duration="15414000" />
     </task>
     <task id="LOCAL-00001" summary="Inicio">
       <created>1667327097802</created>

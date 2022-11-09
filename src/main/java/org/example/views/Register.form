@@ -117,7 +117,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <toolTipText value="Contraseña"/>
+            </properties>
           </component>
           <component id="28951" class="javax.swing.JPasswordField" binding="confirmPasswordField">
             <constraints>
@@ -125,7 +127,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <toolTipText value="Confirmar contraseña"/>
+            </properties>
           </component>
           <component id="271ea" class="javax.swing.JTextField" binding="emailField">
             <constraints>
@@ -133,7 +137,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <toolTipText value="Email"/>
+            </properties>
           </component>
           <component id="435d3" class="javax.swing.JTextField" binding="usernameField">
             <constraints>
@@ -141,7 +147,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <toolTipText value="Nombre de usuario"/>
+            </properties>
           </component>
           <component id="9fb12" class="javax.swing.JTextField" binding="surnameField">
             <constraints>
@@ -149,7 +157,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <toolTipText value="Apellidos"/>
+            </properties>
           </component>
           <component id="26399" class="javax.swing.JTextField" binding="nameField">
             <constraints>
@@ -157,7 +167,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <toolTipText value="Nombre"/>
+            </properties>
           </component>
         </children>
       </grid>

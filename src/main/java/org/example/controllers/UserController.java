@@ -10,7 +10,7 @@ public class UserController implements FieldVariables {
 
     public static void createUser(String username2, String password2) {
 
-        Document doc = DbController.getDoc(username2, password2);
+        Document doc = DBController.getDoc(username2, password2);
         user = new User(doc.get(name).toString(),
                 doc.get(surname).toString(),
                 doc.get(username).toString(),

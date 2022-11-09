@@ -1,11 +1,19 @@
 package org.example.views;
 
+import org.example.controllers.DBController;
 import org.example.controllers.UserController;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
 
 public class DataViewer {
     JPanel bodyPanel;
@@ -21,6 +29,7 @@ public class DataViewer {
     private JRadioButton tableRadioButton;
     private JRadioButton listRadioButton;
     private JPanel radioButtonsPanel;
+    private JButton saveButton;
 
     private String hideData = "Ocultar datos";
     private String viewData = "Ver datos";
@@ -41,7 +50,13 @@ public class DataViewer {
 
         String[][] data = {{UserController.getUser().getName(), UserController.getUser().getSurname(), UserController.getUser().getUsername(), UserController.getUser().getEmail(), UserController.getUser().getPassword()}};
         String[] column = {name,surname,username,email,password};
-        JTable jt = new JTable(data, column);
+        JTable jt = new JTable(data, column){
+            @Override
+            public boolean editCellAt(int row, int column, java.util.EventObject e) {
+                return false;
+            }
+        };
+        jt.setRowSelectionAllowed(false);
         JScrollPane sp = new JScrollPane(jt);
         sp.setPreferredSize(new Dimension(700, 39));
         jt.getTableHeader().setBackground(exitButton.getBackground());
@@ -72,21 +87,38 @@ public class DataViewer {
             StartViews.startViews();
             StartViews.dataViewerFrame.dispose();
         });
-        tableRadioButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                dataPanel.removeAll();
-                dataPanel.updateUI();
-                dataPanel.add(sp);
-            }
+        tableRadioButton.addActionListener(e -> {
+            dataPanel.removeAll();
+            dataPanel.updateUI();
+            dataPanel.add(sp);
         });
-        listRadioButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        listRadioButton.addActionListener(e -> {
 
-                dataPanel.removeAll();
-                dataPanel.updateUI();
-                makeLabels();
+            dataPanel.removeAll();
+            dataPanel.updateUI();
+            makeLabels();
+        });
+        saveButton.addActionListener(e -> {
+            JFileChooser fileChooser = new JFileChooser();
+
+            fileChooser.setSelectedFile(new File("fichero.txt"));
+            fileChooser.setDialogTitle("Guardando fichero con sus datos");
+            int result = fileChooser.showSaveDialog(null);
+
+            if (result == JFileChooser.APPROVE_OPTION) {
+
+                String path = fileChooser.getSelectedFile().getAbsolutePath();
+
+                try {
+
+                    File file = new File(path);
+                    FileWriter writer = new FileWriter(file);
+                    writer.write(DBController.exportUser(UserController.getUser().getEmail()).toString());
+                    writer.close();
+                } catch (IOException ex) {
+
+                    ex.printStackTrace();
+                }
             }
         });
     }
@@ -94,36 +126,22 @@ public class DataViewer {
         JPanel jPanel = new JPanel();
         jPanel.setLayout(new GridLayout(5,2));
         GridBagConstraints gbc = new GridBagConstraints();
-        JLabel label1 = new JLabel(name + ":");
-        label1.setHorizontalAlignment(SwingConstants.CENTER);
-        JLabel label2 = new JLabel(UserController.getUser().getName());
-        label2.setHorizontalAlignment(SwingConstants.CENTER);
-        JLabel label3 = new JLabel(surname + ":");
-        label3.setHorizontalAlignment(SwingConstants.CENTER);
-        JLabel label4 = new JLabel(UserController.getUser().getSurname());
-        label4.setHorizontalAlignment(SwingConstants.CENTER);
-        JLabel label5 = new JLabel(username + ":");
-        label5.setHorizontalAlignment(SwingConstants.CENTER);
-        JLabel label6 = new JLabel(UserController.getUser().getUsername());
-        label6.setHorizontalAlignment(SwingConstants.CENTER);
-        JLabel label7 = new JLabel(email + ":");
-        label7.setHorizontalAlignment(SwingConstants.CENTER);
-        JLabel label8 = new JLabel(UserController.getUser().getEmail());
-        label8.setHorizontalAlignment(SwingConstants.CENTER);
-        JLabel label9 = new JLabel(password + ":");
-        label9.setHorizontalAlignment(SwingConstants.CENTER);
-        JLabel label10 = new JLabel(UserController.getUser().getPassword());
-        label10.setHorizontalAlignment(SwingConstants.CENTER);
-        jPanel.add(label1, gbc);
-        jPanel.add(label2, gbc);
-        jPanel.add(label3, gbc);
-        jPanel.add(label4, gbc);
-        jPanel.add(label5, gbc);
-        jPanel.add(label6, gbc);
-        jPanel.add(label7, gbc);
-        jPanel.add(label8, gbc);
-        jPanel.add(label9, gbc);
-        jPanel.add(label10, gbc);
+        ArrayList<JLabel> labels = new ArrayList<>(){{
+            add(new JLabel(name + ":"));
+            add(new JLabel(UserController.getUser().getName()));
+            add(new JLabel(surname + ":"));
+            add(new JLabel(UserController.getUser().getSurname()));
+            add(new JLabel(username + ":"));
+            add(new JLabel(UserController.getUser().getUsername()));
+            add(new JLabel(email + ":"));
+            add(new JLabel(UserController.getUser().getEmail()));
+            add(new JLabel(password + ":"));
+            add(new JLabel(UserController.getUser().getPassword()));
+        }};
+        for (JLabel label : labels) {
+            label.setHorizontalAlignment(SwingConstants.CENTER);
+            jPanel.add(label, gbc);
+        }
         dataPanel.add(jPanel);
     }
 }

@@ -86,7 +86,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <toolTipText value="Contraseña"/>
+            </properties>
           </component>
           <component id="952fa" class="javax.swing.JTextField" binding="usernameField">
             <constraints>
@@ -94,7 +96,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <toolTipText value="Nombre de usuario"/>
+            </properties>
           </component>
         </children>
       </grid>
