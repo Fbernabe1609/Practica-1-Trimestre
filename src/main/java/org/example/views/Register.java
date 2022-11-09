@@ -8,6 +8,7 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 
 public class Register extends JDialog implements Commons {
     private JPanel contentPane;
@@ -29,8 +30,18 @@ public class Register extends JDialog implements Commons {
     private JPanel buttonsPanel;
     private JPanel contentButtonsPanel;
 
+    private ArrayList<JTextField> textFields = new ArrayList<>() {{
+        add(usernameField);
+        add(passwordField);
+        add(emailField);
+        add(nameField);
+        add(surnameField);
+        add(confirmPasswordField);
+    }};
+
     Border border = BorderFactory.createLineBorder(buttonOK.getBackground());
     Border borderDefault = usernameField.getBorder();
+
     public Register() {
 
         UIManager.put("OptionPane.messageForeground", Color.red);
@@ -53,13 +64,9 @@ public class Register extends JDialog implements Commons {
         });
 
         contentPane.registerKeyboardAction(e -> onCancel(), KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
-        focusEvent(usernameField, border, borderDefault);
-        focusEvent(passwordField, border, borderDefault);
-        focusEvent(emailField, border, borderDefault);
-        focusEvent(usernameField, border, borderDefault);
-        focusEvent(surnameField, border, borderDefault);
-        focusEvent(confirmPasswordField, border, borderDefault);
-        focusEvent(nameField, border, borderDefault);
+        for (JTextField textField : textFields) {
+            focusEvent(textField, border, borderDefault);
+        }
     }
 
     private void onOK() {
@@ -76,12 +83,9 @@ public class Register extends JDialog implements Commons {
                             dispose();
                             StartViews.startDataViewer();
                         }
-                        case 1 ->
-                                JOptionPane.showMessageDialog(this, "Ya hay una cuenta con ese nombre de usuario.", "Error", JOptionPane.ERROR_MESSAGE);
-                        case 2 ->
-                                JOptionPane.showMessageDialog(this, "Ya hay una cuenta con ese email.", "Error", JOptionPane.ERROR_MESSAGE);
-                        default ->
-                                JOptionPane.showMessageDialog(this, "Ya hay una cuenta con los datos introducidos.", "Error", JOptionPane.ERROR_MESSAGE);
+                        case 1 -> JOptionPane.showMessageDialog(this, "Ya hay una cuenta con ese nombre de usuario.", "Error", JOptionPane.ERROR_MESSAGE, icono);
+                        case 2 -> JOptionPane.showMessageDialog(this, "Ya hay una cuenta con ese email.", "Error", JOptionPane.ERROR_MESSAGE, icono);
+                        default -> JOptionPane.showMessageDialog(this, "Ya hay una cuenta con los datos introducidos.", "Error", JOptionPane.ERROR_MESSAGE, icono);
                     }
                 } else {
                     JOptionPane.showMessageDialog(this, "Debe introducir un email válido.", "Error", JOptionPane.ERROR_MESSAGE, icono);
