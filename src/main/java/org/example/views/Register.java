@@ -26,6 +26,9 @@ public class Register extends JDialog {
     private JLabel emailLabel;
     private JLabel passwordLabel;
     private JLabel confirmPasswordLabel;
+    private JPanel askDataPanel;
+    private JPanel buttonsPanel;
+    private JPanel contentButtonsPanel;
 
     ClassLoader classloader = Thread.currentThread().getContextClassLoader();
     URL url = classloader.getResource("error.gif");

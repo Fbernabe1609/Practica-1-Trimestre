@@ -17,7 +17,7 @@ public class Login extends JDialog {
     private JTextField usernameField;
     private JLabel usernameLabel;
     private JLabel passwordLabel;
-    private JPanel bodyPanel;
+    private JPanel askDataPanel;
     private JPanel buttonsPanel;
     private JPanel contentButtonPanel;
 

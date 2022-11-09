@@ -56,39 +56,7 @@ public class DataViewer {
                 if (tableRadioButton.isSelected()) {
                     dataPanel.add(sp);
                 } else {
-                    JPanel jPanel = new JPanel();
-                    jPanel.setLayout(new GridLayout(5,2));
-                    GridBagConstraints gbc = new GridBagConstraints();
-                    JLabel label1 = new JLabel(name + ":");
-                    label1.setHorizontalAlignment(SwingConstants.CENTER);
-                    JLabel label2 = new JLabel(UserController.getUser().getName());
-                    label2.setHorizontalAlignment(SwingConstants.CENTER);
-                    JLabel label3 = new JLabel(surname + ":");
-                    label3.setHorizontalAlignment(SwingConstants.CENTER);
-                    JLabel label4 = new JLabel(UserController.getUser().getSurname());
-                    label4.setHorizontalAlignment(SwingConstants.CENTER);
-                    JLabel label5 = new JLabel(username + ":");
-                    label5.setHorizontalAlignment(SwingConstants.CENTER);
-                    JLabel label6 = new JLabel(UserController.getUser().getUsername());
-                    label6.setHorizontalAlignment(SwingConstants.CENTER);
-                    JLabel label7 = new JLabel(email + ":");
-                    label7.setHorizontalAlignment(SwingConstants.CENTER);
-                    JLabel label8 = new JLabel(UserController.getUser().getEmail());
-                    label8.setHorizontalAlignment(SwingConstants.CENTER);
-                    JLabel label9 = new JLabel(password + ":");
-                    label9.setHorizontalAlignment(SwingConstants.CENTER);
-                    JLabel label10 = new JLabel(UserController.getUser().getPassword());
-                    label10.setHorizontalAlignment(SwingConstants.CENTER);
-                    jPanel.add(label1, gbc);
-                    jPanel.add(label2, gbc);
-                    jPanel.add(label3, gbc);
-                    jPanel.add(label4, gbc);
-                    jPanel.add(label5, gbc);
-                    jPanel.add(label6, gbc);
-                    jPanel.add(label7, gbc);
-                    jPanel.add(label8, gbc);
-                    jPanel.add(label9, gbc);
-                    jPanel.add(label10, gbc);
+                    makeLabels();
                 }
             } else {
                 listRadioButton.setVisible(false);
@@ -118,42 +86,44 @@ public class DataViewer {
 
                 dataPanel.removeAll();
                 dataPanel.updateUI();
-                JPanel jPanel = new JPanel();
-                jPanel.setLayout(new GridLayout(5,2));
-                GridBagConstraints gbc = new GridBagConstraints();
-                JLabel label1 = new JLabel(name + ":");
-                label1.setHorizontalAlignment(SwingConstants.CENTER);
-                JLabel label2 = new JLabel(UserController.getUser().getName());
-                label2.setHorizontalAlignment(SwingConstants.CENTER);
-                JLabel label3 = new JLabel(surname + ":");
-                label3.setHorizontalAlignment(SwingConstants.CENTER);
-                JLabel label4 = new JLabel(UserController.getUser().getSurname());
-                label4.setHorizontalAlignment(SwingConstants.CENTER);
-                JLabel label5 = new JLabel(username + ":");
-                label5.setHorizontalAlignment(SwingConstants.CENTER);
-                JLabel label6 = new JLabel(UserController.getUser().getUsername());
-                label6.setHorizontalAlignment(SwingConstants.CENTER);
-                JLabel label7 = new JLabel(email + ":");
-                label7.setHorizontalAlignment(SwingConstants.CENTER);
-                JLabel label8 = new JLabel(UserController.getUser().getEmail());
-                label8.setHorizontalAlignment(SwingConstants.CENTER);
-                JLabel label9 = new JLabel(password + ":");
-                label9.setHorizontalAlignment(SwingConstants.CENTER);
-                JLabel label10 = new JLabel(UserController.getUser().getPassword());
-                label10.setHorizontalAlignment(SwingConstants.CENTER);
-                jPanel.add(label1, gbc);
-                jPanel.add(label2, gbc);
-                jPanel.add(label3, gbc);
-                jPanel.add(label4, gbc);
-                jPanel.add(label5, gbc);
-                jPanel.add(label6, gbc);
-                jPanel.add(label7, gbc);
-                jPanel.add(label8, gbc);
-                jPanel.add(label9, gbc);
-                jPanel.add(label10, gbc);
-                dataPanel.add(jPanel);
+                makeLabels();
             }
         });
     }
-
+    public void makeLabels() {
+        JPanel jPanel = new JPanel();
+        jPanel.setLayout(new GridLayout(5,2));
+        GridBagConstraints gbc = new GridBagConstraints();
+        JLabel label1 = new JLabel(name + ":");
+        label1.setHorizontalAlignment(SwingConstants.CENTER);
+        JLabel label2 = new JLabel(UserController.getUser().getName());
+        label2.setHorizontalAlignment(SwingConstants.CENTER);
+        JLabel label3 = new JLabel(surname + ":");
+        label3.setHorizontalAlignment(SwingConstants.CENTER);
+        JLabel label4 = new JLabel(UserController.getUser().getSurname());
+        label4.setHorizontalAlignment(SwingConstants.CENTER);
+        JLabel label5 = new JLabel(username + ":");
+        label5.setHorizontalAlignment(SwingConstants.CENTER);
+        JLabel label6 = new JLabel(UserController.getUser().getUsername());
+        label6.setHorizontalAlignment(SwingConstants.CENTER);
+        JLabel label7 = new JLabel(email + ":");
+        label7.setHorizontalAlignment(SwingConstants.CENTER);
+        JLabel label8 = new JLabel(UserController.getUser().getEmail());
+        label8.setHorizontalAlignment(SwingConstants.CENTER);
+        JLabel label9 = new JLabel(password + ":");
+        label9.setHorizontalAlignment(SwingConstants.CENTER);
+        JLabel label10 = new JLabel(UserController.getUser().getPassword());
+        label10.setHorizontalAlignment(SwingConstants.CENTER);
+        jPanel.add(label1, gbc);
+        jPanel.add(label2, gbc);
+        jPanel.add(label3, gbc);
+        jPanel.add(label4, gbc);
+        jPanel.add(label5, gbc);
+        jPanel.add(label6, gbc);
+        jPanel.add(label7, gbc);
+        jPanel.add(label8, gbc);
+        jPanel.add(label9, gbc);
+        jPanel.add(label10, gbc);
+        dataPanel.add(jPanel);
+    }
 }
