@@ -24,8 +24,9 @@ public class DBController implements FieldVariables {
         }
         return isnull;
     }
+
     public static Document exportUser(String email2) {
-        return db.getCollection().find(eq(email,email2)).first();
+        return db.getCollection().find(eq(email, email2)).first();
     }
 
     public static Document getDoc(String username2, String password2) {

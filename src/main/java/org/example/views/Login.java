@@ -9,7 +9,7 @@ import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Login extends JDialog implements Commons{
+public class Login extends JDialog implements Commons {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;

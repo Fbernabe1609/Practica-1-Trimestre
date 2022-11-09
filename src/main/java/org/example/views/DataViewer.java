@@ -49,8 +49,8 @@ public class DataViewer {
         welcomeLabel.setText(welcomeLabel.getText() + " " + UserController.getUser().getUsername());
 
         String[][] data = {{UserController.getUser().getName(), UserController.getUser().getSurname(), UserController.getUser().getUsername(), UserController.getUser().getEmail(), UserController.getUser().getPassword()}};
-        String[] column = {name,surname,username,email,password};
-        JTable jt = new JTable(data, column){
+        String[] column = {name, surname, username, email, password};
+        JTable jt = new JTable(data, column) {
             @Override
             public boolean editCellAt(int row, int column, java.util.EventObject e) {
                 return false;
@@ -110,9 +110,7 @@ public class DataViewer {
                 String path = fileChooser.getSelectedFile().getAbsolutePath();
 
                 try {
-
-                    File file = new File(path);
-                    FileWriter writer = new FileWriter(file);
+                    FileWriter writer = new FileWriter(path);
                     writer.write(DBController.exportUser(UserController.getUser().getEmail()).toString());
                     writer.close();
                 } catch (IOException ex) {
@@ -122,11 +120,12 @@ public class DataViewer {
             }
         });
     }
+
     public void makeLabels() {
         JPanel jPanel = new JPanel();
-        jPanel.setLayout(new GridLayout(5,2));
+        jPanel.setLayout(new GridLayout(5, 2));
         GridBagConstraints gbc = new GridBagConstraints();
-        ArrayList<JLabel> labels = new ArrayList<>(){{
+        ArrayList<JLabel> labels = new ArrayList<>() {{
             add(new JLabel(name + ":"));
             add(new JLabel(UserController.getUser().getName()));
             add(new JLabel(surname + ":"));
