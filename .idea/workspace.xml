@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b9b5e2f-813f-41d9-9cfc-4103b2ef3c81" name="Changes" comment="Avance casa">
+    <list default="true" id="2b9b5e2f-813f-41d9-9cfc-4103b2ef3c81" name="Changes" comment="Avance clase">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/DataViewer.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/DataViewer.form" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +122,7 @@
       <workItem from="1668001780942" duration="17654000" />
       <workItem from="1668029554008" duration="2916000" />
       <workItem from="1668072312962" duration="6592000" />
-      <workItem from="1668095448831" duration="4571000" />
+      <workItem from="1668095448831" duration="4952000" />
     </task>
     <task id="LOCAL-00001" summary="Inicio">
       <created>1667327097802</created>
@@ -284,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668110180129</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Avance clase">
+      <created>1668110208827</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1668110208827</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,8 +316,8 @@
     <MESSAGE value="Avance casa, null tocando los huevos" />
     <MESSAGE value="Avance casa, los null ya no toca los huevos" />
     <MESSAGE value="Avance clase, procesando los controladores" />
-    <MESSAGE value="Avance clase" />
     <MESSAGE value="Avance casa" />
-    <option name="LAST_COMMIT_MESSAGE" value="Avance casa" />
+    <MESSAGE value="Avance clase" />
+    <option name="LAST_COMMIT_MESSAGE" value="Avance clase" />
   </component>
 </project>
