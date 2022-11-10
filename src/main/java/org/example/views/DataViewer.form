@@ -2,127 +2,140 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="org.example.views.DataViewer">
   <grid id="27dc6" binding="bodyPanel" layout-manager="BorderLayout" hgap="5" vgap="5">
     <constraints>
-      <xy x="20" y="20" width="500" height="400"/>
+      <xy x="20" y="20" width="1480" height="1154"/>
     </constraints>
     <properties>
       <autoscrolls value="true"/>
     </properties>
     <border type="none"/>
     <children>
-      <grid id="2d4da" binding="panelOfPanels" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-        <margin top="0" left="0" bottom="0" right="0"/>
+      <grid id="78cd4" class="javax.swing.JLabel" binding="bodyLabel" layout-manager="BorderLayout" hgap="0" vgap="0">
         <constraints border-constraint="Center"/>
-        <properties/>
+        <properties>
+          <icon value="bg.jpg"/>
+          <opaque value="true"/>
+          <text value=""/>
+        </properties>
         <border type="none"/>
         <children>
-          <grid id="65680" binding="dataPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
-            <constraints>
-              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties/>
-            <border type="none"/>
-            <children/>
-          </grid>
-          <grid id="5057c" binding="buttonsRadioPanel" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="fb3ee" binding="panelOfPanels" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
-            <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties/>
+            <constraints border-constraint="Center"/>
+            <properties>
+              <opaque value="false"/>
+            </properties>
             <border type="none"/>
             <children>
-              <grid id="bec5a" binding="buttonsPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+              <grid id="23578" binding="buttonsRadioPanel" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                 </constraints>
-                <properties/>
+                <properties>
+                  <opaque value="false"/>
+                </properties>
                 <border type="none"/>
                 <children>
-                  <component id="d655b" class="javax.swing.JButton" binding="viewDataButton">
-                    <constraints/>
+                  <grid id="4f655" binding="buttonsPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                    </constraints>
                     <properties>
-                      <background color="-8274490"/>
-                      <foreground color="-1"/>
-                      <text value="Ver datos"/>
-                      <toolTipText value="Ver datos"/>
+                      <opaque value="false"/>
                     </properties>
-                  </component>
-                  <component id="5830d" class="javax.swing.JButton" binding="goBackButton">
-                    <constraints/>
+                    <border type="none"/>
+                    <children>
+                      <component id="9fd58" class="javax.swing.JButton" binding="viewDataButton">
+                        <constraints/>
+                        <properties>
+                          <background color="-8274490"/>
+                          <foreground color="-1"/>
+                          <text value="Ver datos"/>
+                          <toolTipText value="Ver datos"/>
+                        </properties>
+                      </component>
+                      <component id="8060f" class="javax.swing.JButton" binding="goBackButton">
+                        <constraints/>
+                        <properties>
+                          <background color="-8274490"/>
+                          <foreground color="-1"/>
+                          <text value="Volver"/>
+                          <toolTipText value="Volver"/>
+                        </properties>
+                      </component>
+                      <component id="269a4" class="javax.swing.JButton" binding="exitButton">
+                        <constraints/>
+                        <properties>
+                          <background color="-8274490"/>
+                          <foreground color="-1"/>
+                          <text value="Salir"/>
+                          <toolTipText value="Salir"/>
+                        </properties>
+                      </component>
+                      <component id="308d0" class="javax.swing.JButton" binding="saveButton">
+                        <constraints/>
+                        <properties>
+                          <background color="-8274490"/>
+                          <foreground color="-1"/>
+                          <text value="Exportar datos"/>
+                          <toolTipText value="Exportar datos"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="b24ed" binding="radioButtonsPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                    </constraints>
                     <properties>
-                      <background color="-8274490"/>
-                      <foreground color="-1"/>
-                      <text value="Volver"/>
-                      <toolTipText value="Volver"/>
+                      <opaque value="false"/>
                     </properties>
-                  </component>
-                  <component id="18a7a" class="javax.swing.JButton" binding="exitButton">
-                    <constraints/>
+                    <border type="none"/>
+                    <children>
+                      <component id="e9113" class="javax.swing.JRadioButton" binding="tableRadioButton">
+                        <constraints/>
+                        <properties>
+                          <opaque value="false"/>
+                          <selected value="true"/>
+                          <text value="Tabla"/>
+                          <toolTipText value="Tabla"/>
+                          <visible value="false"/>
+                        </properties>
+                      </component>
+                      <component id="17c08" class="javax.swing.JRadioButton" binding="listRadioButton">
+                        <constraints/>
+                        <properties>
+                          <opaque value="false"/>
+                          <text value="Lista"/>
+                          <toolTipText value="Lista"/>
+                          <visible value="false"/>
+                        </properties>
+                      </component>
+                      <grid id="3260a" binding="dataPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                        <constraints/>
+                        <properties>
+                          <opaque value="false"/>
+                        </properties>
+                        <border type="none"/>
+                        <children/>
+                      </grid>
+                    </children>
+                  </grid>
+                  <grid id="84f3d" class="javax.swing.JLabel" binding="welcomeLabel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
                     <properties>
-                      <background color="-8274490"/>
-                      <foreground color="-1"/>
-                      <text value="Salir"/>
-                      <toolTipText value="Salir"/>
+                      <text value="Bienvenid@"/>
                     </properties>
-                  </component>
-                  <component id="25884" class="javax.swing.JButton" binding="saveButton">
-                    <constraints/>
-                    <properties>
-                      <background color="-8274490"/>
-                      <foreground color="-1"/>
-                      <text value="Exportar datos"/>
-                      <toolTipText value="Exportar datos"/>
-                    </properties>
-                  </component>
-                </children>
-              </grid>
-              <grid id="f8ca7" binding="radioButtonsPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
-                <constraints>
-                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties/>
-                <border type="none"/>
-                <children>
-                  <component id="d013b" class="javax.swing.JRadioButton" binding="tableRadioButton">
-                    <constraints/>
-                    <properties>
-                      <selected value="true"/>
-                      <text value="Tabla"/>
-                      <toolTipText value="Tabla"/>
-                      <visible value="false"/>
-                    </properties>
-                  </component>
-                  <component id="d8fd9" class="javax.swing.JRadioButton" binding="listRadioButton">
-                    <constraints/>
-                    <properties>
-                      <text value="Lista"/>
-                      <toolTipText value="Lista"/>
-                      <visible value="false"/>
-                    </properties>
-                  </component>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
                 </children>
               </grid>
             </children>
           </grid>
-        </children>
-      </grid>
-      <grid id="78aad" binding="welcomeLabelPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-        <margin top="5" left="0" bottom="0" right="0"/>
-        <constraints border-constraint="North"/>
-        <properties/>
-        <border type="none"/>
-        <children>
-          <component id="c5d18" class="javax.swing.JLabel" binding="welcomeLabel">
-            <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <alignmentY value="0.5"/>
-              <horizontalAlignment value="0"/>
-              <iconTextGap value="4"/>
-              <text value="Bienbenid@"/>
-            </properties>
-          </component>
         </children>
       </grid>
     </children>

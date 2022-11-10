@@ -15,16 +15,16 @@ public class DataViewer {
     private JLabel welcomeLabel;
     private JButton viewDataButton;
     private JPanel dataPanel;
-    private JPanel buttonsRadioPanel;
-    private JPanel panelOfPanels;
-    private JPanel welcomeLabelPanel;
     private JButton exitButton;
     private JButton goBackButton;
-    private JPanel buttonsPanel;
     private JRadioButton tableRadioButton;
     private JRadioButton listRadioButton;
-    private JPanel radioButtonsPanel;
     private JButton saveButton;
+    private JPanel panelOfPanels;
+    private JPanel buttonsRadioPanel;
+    private JPanel buttonsPanel;
+    private JPanel radioButtonsPanel;
+    private JLabel bodyLabel;
 
     private String hideData = "Ocultar datos";
     private String viewData = "Ver datos";
@@ -121,6 +121,7 @@ public class DataViewer {
     public void makeLabels() {
         JPanel jPanel = new JPanel();
         jPanel.setLayout(new GridLayout(5, 2));
+        jPanel.setOpaque(false);
         GridBagConstraints gbc = new GridBagConstraints();
         ArrayList<JLabel> labels = new ArrayList<>() {{
             add(new JLabel(name + ":"));
