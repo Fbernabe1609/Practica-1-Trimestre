@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b9b5e2f-813f-41d9-9cfc-4103b2ef3c81" name="Changes" comment="Avance casa">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_11_2022_17_33__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_11_2022_17_33__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_11_2022_8_48__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_11_2022_8_48__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_11_2022_12_10__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_11_2022_12_10__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/DataViewer.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/DataViewer.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/DataViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/DataViewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Home.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Home.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Home.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bg.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +121,7 @@
       <workItem from="1668001780942" duration="17654000" />
       <workItem from="1668029554008" duration="2916000" />
       <workItem from="1668072312962" duration="6592000" />
-      <workItem from="1668095448831" duration="4539000" />
+      <workItem from="1668095448831" duration="4571000" />
     </task>
     <task id="LOCAL-00001" summary="Inicio">
       <created>1667327097802</created>
@@ -286,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668082336707</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Avance casa">
+      <created>1668110180129</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1668110180129</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
