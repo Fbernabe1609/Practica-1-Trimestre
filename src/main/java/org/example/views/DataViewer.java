@@ -34,7 +34,6 @@ public class DataViewer {
     private String email = "Email";
     private String password = "Contraseña";
 
-
     public DataViewer() {
 
         ButtonGroup group = new ButtonGroup();
@@ -77,30 +76,33 @@ public class DataViewer {
                 dataPanel.updateUI();
             }
         });
+
         exitButton.addActionListener(e -> System.exit(0));
         goBackButton.addActionListener(e -> {
             StartViews.startViews();
             StartViews.dataViewerFrame.dispose();
         });
+
         tableRadioButton.addActionListener(e -> {
             dataPanel.removeAll();
             dataPanel.updateUI();
             dataPanel.add(sp);
         });
+
         listRadioButton.addActionListener(e -> {
 
             dataPanel.removeAll();
             dataPanel.updateUI();
             makeLabels();
         });
+
         saveButton.addActionListener(e -> {
             JFileChooser fileChooser = new JFileChooser();
 
             fileChooser.setSelectedFile(new File("fichero.txt"));
             fileChooser.setDialogTitle("Guardando fichero con sus datos");
-            int result = fileChooser.showSaveDialog(null);
 
-            if (result == JFileChooser.APPROVE_OPTION) {
+            if (fileChooser.showSaveDialog(null) == JFileChooser.APPROVE_OPTION) {
 
                 String path = fileChooser.getSelectedFile().getAbsolutePath();
 
