@@ -29,6 +29,8 @@ public class Register extends JDialog implements Commons {
     private JPanel askDataPanel;
     private JPanel buttonsPanel;
     private JPanel contentButtonsPanel;
+    private JLabel acceptTermsLabel;
+    private JCheckBox acceptTermsCheckBox;
 
     private ArrayList<JTextField> textFields = new ArrayList<>() {{
         add(usernameField);
@@ -74,18 +76,22 @@ public class Register extends JDialog implements Commons {
             if (ValidationData.checkPassword(String.valueOf(passwordField.getPassword()), String.valueOf(confirmPasswordField.getPassword()))) {
 
                 if (ValidationData.checkEmail(emailField.getText())) {
-                    switch (DBController.checkRegister(usernameField.getText(), emailField.getText())) {
-                        case 0 -> {
-                            String password = String.valueOf(passwordField.getPassword()).replaceAll(" ,]", "");
-                            password = password.replace("[", "");
-                            DBController.addDataDocument(nameField.getText(), surnameField.getText(), usernameField.getText(), emailField.getText(), password);
-                            UserController.createUser(usernameField.getText(), password);
-                            dispose();
-                            StartViews.startDataViewer();
+                    if(acceptTermsCheckBox.isSelected()) {
+                        switch (DBController.checkRegister(usernameField.getText(), emailField.getText())) {
+                            case 0 -> {
+                                String password = String.valueOf(passwordField.getPassword()).replaceAll(" ,]", "");
+                                password = password.replace("[", "");
+                                DBController.addDataDocument(nameField.getText(), surnameField.getText(), usernameField.getText(), emailField.getText(), password);
+                                UserController.createUser(usernameField.getText(), password);
+                                dispose();
+                                StartViews.startDataViewer();
+                            }
+                            case 1 -> JOptionPane.showMessageDialog(this, "Ya hay una cuenta con ese nombre de usuario.", "Error", JOptionPane.ERROR_MESSAGE, icono);
+                            case 2 -> JOptionPane.showMessageDialog(this, "Ya hay una cuenta con ese email.", "Error", JOptionPane.ERROR_MESSAGE, icono);
+                            default -> JOptionPane.showMessageDialog(this, "Ya hay una cuenta con los datos introducidos.", "Error", JOptionPane.ERROR_MESSAGE, icono);
                         }
-                        case 1 -> JOptionPane.showMessageDialog(this, "Ya hay una cuenta con ese nombre de usuario.", "Error", JOptionPane.ERROR_MESSAGE, icono);
-                        case 2 -> JOptionPane.showMessageDialog(this, "Ya hay una cuenta con ese email.", "Error", JOptionPane.ERROR_MESSAGE, icono);
-                        default -> JOptionPane.showMessageDialog(this, "Ya hay una cuenta con los datos introducidos.", "Error", JOptionPane.ERROR_MESSAGE, icono);
+                    } else {
+                        JOptionPane.showMessageDialog(this, "Debe aceptar los términos para continuar.", "Error", JOptionPane.ERROR_MESSAGE, icono);
                     }
                 } else {
                     JOptionPane.showMessageDialog(this, "Debe introducir un email válido.", "Error", JOptionPane.ERROR_MESSAGE, icono);
