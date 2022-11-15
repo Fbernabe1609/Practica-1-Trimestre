@@ -45,6 +45,8 @@ public class Register extends JDialog implements Commons {
     Border borderDefault = usernameField.getBorder();
 
     public Register() {
+        buttonCancel.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        buttonOK.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         UIManager.put("OptionPane.messageForeground", Color.red);
         UIManager.put("Button.background", buttonOK.getBackground());

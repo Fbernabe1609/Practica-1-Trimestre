@@ -26,6 +26,9 @@ public class Login extends JDialog implements Commons {
 
     public Login() {
 
+        buttonCancel.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        buttonOK.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
         UIManager.put("OptionPane.messageForeground", Color.red);
         UIManager.put("Button.background", buttonOK.getBackground());
         UIManager.put("Button.foreground", Color.white);

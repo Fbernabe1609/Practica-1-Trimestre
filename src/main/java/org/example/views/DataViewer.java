@@ -39,6 +39,13 @@ public class DataViewer {
 
     public DataViewer() {
 
+        deleteButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        exitButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        viewDataButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        goBackButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        listRadioButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        tableRadioButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
         ButtonGroup group = new ButtonGroup();
         group.add(tableRadioButton);
         group.add(listRadioButton);

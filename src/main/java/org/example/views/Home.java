@@ -1,6 +1,7 @@
 package org.example.views;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Home {
     JPanel bodyPanel;
@@ -12,6 +13,9 @@ public class Home {
     private JLabel imageLabel;
 
     public Home() {
+        exitButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        loginButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        registerButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
         loginButton.addActionListener(e -> Login.start());
         registerButton.addActionListener(e -> Register.start());
         exitButton.addActionListener(e -> System.exit(0));
