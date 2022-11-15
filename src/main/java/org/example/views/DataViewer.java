@@ -5,6 +5,8 @@ import org.example.controllers.UserController;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -25,6 +27,7 @@ public class DataViewer {
     private JPanel buttonsPanel;
     private JPanel radioButtonsPanel;
     private JLabel bodyLabel;
+    private JButton deleteButton;
 
     private String hideData = "Ocultar datos";
     private String viewData = "Ver datos";
@@ -114,6 +117,14 @@ public class DataViewer {
 
                     ex.printStackTrace();
                 }
+            }
+        });
+        deleteButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                DBController.deleteDataDocument();
+                StartViews.startViews();
+                StartViews.dataViewerFrame.dispose();
             }
         });
     }

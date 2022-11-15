@@ -8,6 +8,8 @@ import org.example.models.DBHelper;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.Objects;
+
 import static com.mongodb.client.model.Filters.eq;
 
 class DBControllerTest {
@@ -50,5 +52,18 @@ class DBControllerTest {
         } finally {
             Assertions.assertTrue(doc < db.getCollection().countDocuments());
         }
+    }
+
+    @Test
+    void deleteDataDocument() {
+        String username = "nombre_de_usuario";
+        String username2 = "Pep";
+        Document doc = null;
+        try {
+            doc = db.getCollection().findOneAndDelete(Objects.requireNonNull(db.getCollection().find(eq(username, username2)).first()));
+        } catch (MongoException e) {
+            System.err.println("Unable to insert due to an error: " + e);
+        }
+        Assertions.assertNotNull(doc);
     }
 }

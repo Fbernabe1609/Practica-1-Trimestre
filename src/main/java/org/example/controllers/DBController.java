@@ -8,6 +8,8 @@ import org.bson.conversions.Bson;
 import org.bson.types.ObjectId;
 import org.example.models.DBHelper;
 
+import java.util.Objects;
+
 import static com.mongodb.client.model.Filters.eq;
 
 public class DBController implements FieldVariables {
@@ -73,6 +75,13 @@ public class DBController implements FieldVariables {
                     .append(password, password2)
             );
             System.out.println("¡Éxito! Id documento: " + result.getInsertedId());
+        } catch (MongoException e) {
+            System.err.println("Unable to insert due to an error: " + e);
+        }
+    }
+    public static void deleteDataDocument() {
+        try {
+            db.getCollection().findOneAndDelete(Objects.requireNonNull(db.getCollection().find(eq(username, UserController.getUser().getUsername())).first()));
         } catch (MongoException e) {
             System.err.println("Unable to insert due to an error: " + e);
         }

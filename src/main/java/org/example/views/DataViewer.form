@@ -81,6 +81,15 @@
                           <toolTipText value="Exportar datos"/>
                         </properties>
                       </component>
+                      <component id="7ece6" class="javax.swing.JButton" binding="deleteButton">
+                        <constraints/>
+                        <properties>
+                          <background color="-8274490"/>
+                          <foreground color="-1"/>
+                          <text value="Borrar cuenta"/>
+                          <toolTipText value="Borrar cuenta"/>
+                        </properties>
+                      </component>
                     </children>
                   </grid>
                   <grid id="b24ed" binding="radioButtonsPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
