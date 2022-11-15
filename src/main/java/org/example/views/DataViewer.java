@@ -45,6 +45,7 @@ public class DataViewer {
         goBackButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
         listRadioButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
         tableRadioButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        saveButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         ButtonGroup group = new ButtonGroup();
         group.add(tableRadioButton);
