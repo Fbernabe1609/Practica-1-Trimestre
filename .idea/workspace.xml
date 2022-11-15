@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b9b5e2f-813f-41d9-9cfc-4103b2ef3c81" name="Changes" comment="Avance casa, borrar cuenta">
+    <list default="true" id="2b9b5e2f-813f-41d9-9cfc-4103b2ef3c81" name="Changes" comment="Avance casa, botones especiales">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/DataViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/DataViewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Home.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/DataViewer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/DataViewer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/DataViewer$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/DataViewer$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/DataViewer$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/DataViewer$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/DataViewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/DataViewer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Home.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Home.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Login$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Login$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Register$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Register$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/Register.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +161,7 @@
       <workItem from="1668072312962" duration="6592000" />
       <workItem from="1668095448831" duration="5575000" />
       <workItem from="1668521082282" duration="3599000" />
-      <workItem from="1668548143130" duration="3868000" />
+      <workItem from="1668548143130" duration="4094000" />
     </task>
     <task id="LOCAL-00001" summary="Inicio">
       <created>1667327097802</created>
@@ -364,7 +359,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668551282605</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Avance casa, botones especiales">
+      <created>1668552045249</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1668552045249</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,6 +394,7 @@
     <MESSAGE value="Avance casa, test hechos" />
     <MESSAGE value="Avance casa" />
     <MESSAGE value="Avance casa, borrar cuenta" />
-    <option name="LAST_COMMIT_MESSAGE" value="Avance casa, borrar cuenta" />
+    <MESSAGE value="Avance casa, botones especiales" />
+    <option name="LAST_COMMIT_MESSAGE" value="Avance casa, botones especiales" />
   </component>
 </project>
